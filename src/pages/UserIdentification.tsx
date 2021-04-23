@@ -8,7 +8,8 @@ import {
   KeyboardAvoidingView,
   Platform,
   TouchableWithoutFeedback,
-  Keyboard
+  Keyboard,
+  Alert
 } from 'react-native'
 
 import { useNavigation } from '@react-navigation/native'
@@ -38,6 +39,11 @@ export function UserIdentification() {
     setIsFilled(!!value)
   }
 
+  function handleSubmit() {
+    if (!name) return Alert.alert('Me diz como chamar você 😥')
+
+    navigation.navigate('Confirmation')
+  }
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView
@@ -68,12 +74,7 @@ export function UserIdentification() {
               />
 
               <View style={styles.footer}>
-                <Button
-                  title="Confirmar"
-                  onPress={() => {
-                    isFilled && navigation.navigate('Confirmation')
-                  }}
-                />
+                <Button title="Confirmar" onPress={handleSubmit} />
               </View>
             </View>
           </View>

@@ -8,6 +8,7 @@ import {
 import { Welcome } from '../pages/Welcome'
 import { UserIdentification } from '../pages/UserIdentification'
 import { Confirmation } from '../pages/Confirmation'
+import { PlantSelect } from '../pages/plantSelect'
 
 import colors from '../styles/colors'
 
@@ -31,6 +32,13 @@ const AppRoutes: React.FC = () => (
       component={Confirmation}
       options={{
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+      }}
+    />
+    <stackRoutes.Screen
+      name="PlantSelect"
+      component={PlantSelect}
+      options={{
+        cardStyleInterpolator: CardStyleInterpolators.forScaleFromCenterAndroid
       }}
     />
   </stackRoutes.Navigator>
