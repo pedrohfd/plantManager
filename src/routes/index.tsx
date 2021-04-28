@@ -5,7 +5,7 @@ import AppRoutes from './stack.routes'
 
 const Routes = () => (
   <NavigationContainer>
-    <AppRoutes> </AppRoutes>
+    <AppRoutes />
   </NavigationContainer>
 )
 
