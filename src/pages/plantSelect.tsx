@@ -8,7 +8,7 @@ import {
 } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
-import { EnvironmentButton as EnvironmentButton } from '../components/EnvironmentButton'
+import { EnvironmentButton } from '../components/EnvironmentButton'
 import { Header } from '../components/Header'
 import { PlantCardPrimary } from '../components/PlantCardPrimary'
 import { Load } from '../components/Load'
